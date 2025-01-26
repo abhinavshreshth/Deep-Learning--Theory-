@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 - The biological neuron can change its state based on the signals it receives.
 - The biological neuron can learn from experience and adapt to new situations.
 - The biological neuron is the basic unit of information processing in the human brain.
+- The biological neuron can perform complex computations and solve difficult problems.
 
 """
 
@@ -55,37 +56,38 @@ import matplotlib.pyplot as plt
 - The artificial neuron is a remarkable invention that has redefined the boundaries of what is possible in the field of artificial intelligence and machine learning.
 - The artificial neuron is a remarkable milestone that has set the stage for the next generation of intelligent machines and systems.
 - The artificial neuron is a remarkable innovation that has sparked a revolution in the field of artificial intelligence and machine learning.
+- The artificial neuron is a remarkable advancement that has propelled us into a new era of intelligent systems and technologies.
+- The artificial neuron is a remarkable achievement that has inspired a new wave of research and development in the field of artificial intelligence and machine learning.
 
 """
 
 
-# Python code to compare biological neuron and artificial neuron
-# Simple example of artificial neuron computation
-def artificial_neuron(inputs, weights, bias):
-    # Weighted sum
-    sum_result = np.dot(inputs, weights) + bias
+# --- Simple practical AI Neuron implementation to understand ---
+class AINeuron:
+    """
+    A simple artificial neuron with a sigmoid activation function.
 
-    # Activation function (simple step function)
-    output = 1 if sum_result > 0 else 0
-    return output
+    Attributes:
+        weights (numpy.ndarray): The weights of the neuron.
+        bias (float): The bias of the neuron.
+    """
+
+    def __init__(self, n_inputs):
+        # Initialize weights and bias randomly
+        self.weights = np.random.randn(n_inputs)
+        self.bias = np.random.randn()
+
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
+
+    def forward(self, inputs):
+        # Compute weighted sum and apply activation function
+        weighted_sum = np.dot(inputs, self.weights) + self.bias
+        return self.sigmoid(weighted_sum)
 
 
-# Example usage
-inputs = np.array([1, 2, 3])  # Input signals
-weights = np.array([0.4, -0.2, 0.1])  # Synaptic weights
-bias = -0.5  # Bias term
-
-# Process through artificial neuron
-result = artificial_neuron(inputs, weights, bias)
-print(f"Neuron output: {result}")
-
-# Visualize the neuron's decision boundary
-x = np.linspace(-5, 5, 100)
-y = (-weights[0] * x - bias) / weights[1]  # Decision boundary line
-
-plt.plot(x, y)
-plt.grid(True)
-plt.title("Artificial Neuron Decision Boundary")
-plt.xlabel("Input 1")
-plt.ylabel("Input 2")
-plt.show()
+# Create and test the neuron
+neuron = AINeuron(3)
+test_input = np.array([0.5, 0.8, 0.1])
+output = neuron.forward(test_input)
+print(f"AI Neuron Output: {output}")
