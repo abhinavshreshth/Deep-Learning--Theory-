@@ -25,6 +25,14 @@ ReLU function : max(0,x)
     - helps solve vanishing gradient problem
     - most commonly used in deep neural networks
     - can cause "dying ReLU" problem when neurons become permanently inactive
+    
+Softmax function : e^xi/∑e^xi
+    - definition
+    - range : (0,1)
+    - used in multi-class classification problems
+    - converts raw scores into probabilities
+    - sum of all probabilities is 1
+    - helps in making the model more confident about its predictions
 
 """
 
@@ -79,5 +87,23 @@ plt.plot(input_values, y)
 plt.title("ReLU Activation Function")
 plt.xlabel("Input")
 plt.ylabel("Output")
+plt.grid(True)
+plt.show()
+
+
+# Softmax function
+def softmax(x):
+    exp_values = np.exp(x)
+    return exp_values / np.sum(exp_values)
+
+
+input_values = np.array([1, 2, 3, 4, 5])
+y = softmax(input_values)
+
+# Plot softmax function
+plt.bar(range(len(input_values)), y)
+plt.title("Softmax Activation Function")
+plt.xlabel("Input Index")
+plt.ylabel("Probability")
 plt.grid(True)
 plt.show()
