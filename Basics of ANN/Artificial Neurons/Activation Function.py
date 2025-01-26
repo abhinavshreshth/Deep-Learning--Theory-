@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Activation functions:
+# Activation functions are critical in neural networks as they introduce non-linearity, enabling the
+# network to learn complex relationships. Here, we'll discuss three additional activation functions:
 """ 
 Sigmoid function : 1/(1+e^(-x))
 - definition
