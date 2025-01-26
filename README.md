@@ -13,6 +13,10 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 6. [Graph Convolutional Networks (GCNs)](#6-graph-convolutional-networks-gcns)
 7. [Recurrent Neural Networks (RNNs)](#7-recurrent-neural-networks-rnns)
 8. [Transformer Networks](#8-transformer-networks)
+9. [Types of Layers in Deep Learning](#9-types-of-layers-in-deep-learning)
+10. [Training and Tuning Deep Learning Models](#10-training-and-tuning-deep-learning-models)
+11. [Evaluation Metrics](#11-evaluation-metrics)
+12. [Practical Deep Learning Projects](#12-practical-deep-learning-projects)
 
 ---
 
@@ -21,19 +25,23 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 1.1 Artificial Neurons
 - Biological neuron vs. artificial neuron
 - Activation functions: Sigmoid, ReLU, Tanh, Softmax
+- Additional activation functions: Leaky ReLU, Swish, GELU
 
 ### 1.2 Computational Models of Neurons
 - Weighted sum and bias
 - Thresholding functions
+- Gradient descent: Concept and intuition
 - Linear vs. non-linear models
 
 ### 1.3 Structure of Neural Networks
 - Layers: Input, hidden, and output layers
 - Dense layers vs. sparse connections
+- Role of weights and biases
 
 ### 1.4 Functional Units of ANN
 - Pattern recognition tasks
 - Role of perceptrons in classification
+- Concept of epochs and iterations
 
 ---
 
@@ -51,6 +59,7 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 2.3 Normalization Techniques
 - Input data normalization
 - Batch normalization
+- Role of normalization in accelerating convergence
 
 ---
 
@@ -68,6 +77,11 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 - Dropout
 - Drop connect
 - Batch normalization
+- Weight decay (L2 regularization)
+
+### 3.4 Skip Connections and Residual Networks
+- Purpose of skip connections
+- Residual layers to mitigate vanishing gradients
 
 ---
 
@@ -80,12 +94,14 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 4.2 Deep CNNs
 - Stacking convolutional and pooling layers
 - Fully connected layers in CNNs
+- Transfer learning with pre-trained CNN models
 
 ### 4.3 Architectures
 - AlexNet: Key components and innovations
 - VGG: Small filters and deep networks
 - GoogLeNet: Inception modules
 - ResNet: Residual blocks and skip connections
+- EfficientNet: Scalable and efficient architecture
 
 ### 4.4 Training CNNs
 - Weight initialization techniques
@@ -95,6 +111,7 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 4.5 Visualization and Understanding CNNs
 - Feature maps
 - Gradient-based visualization techniques (e.g., Grad-CAM)
+- Filter visualization and activation maximization
 
 ---
 
@@ -116,6 +133,11 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 - Architecture: Generator and Discriminator
 - Loss functions in GANs (Minimax)
 - Applications of GANs: Image synthesis, style transfer
+- Common challenges in training GANs: Mode collapse, instability
+
+### 5.5 DenseNet and EfficientNet Architectures
+- DenseNet: Feature reuse with dense connections
+- EfficientNet: Model scaling with depth, width, and resolution
 
 ---
 
@@ -128,6 +150,7 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 6.2 GCN Architecture
 - Message passing between graph nodes
 - Layer structure of GCNs
+- Graph pooling techniques
 
 ### 6.3 Applications of GCNs
 - Social network analysis
@@ -151,6 +174,11 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 - Bidirectional LSTMs
 - Gated Recurrent Units (GRU)
 
+### 7.4 Applications of RNNs
+- Language modeling
+- Machine translation
+- Text generation
+
 ---
 
 ## 8. Transformer Networks
@@ -167,6 +195,44 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 ### 8.3 Applications of Transformers
 - Natural Language Processing (NLP)
 - Vision Transformers (ViT)
+- Pretrained language models: GPT, BERT, T5
+
+---
+
+## 9. Types of Layers in Deep Learning
+- Fully connected (dense) layers
+- Convolutional layers
+- Pooling layers: Max pooling, average pooling, global pooling
+- Recurrent layers (e.g., LSTM, GRU)
+- Batch normalization layers
+- Dropout layers
+- Residual layers
+
+---
+
+## 10. Training and Tuning Deep Learning Models
+- Overfitting and underfitting: Recognizing and addressing them
+- Weight initialization techniques (Xavier, He initialization)
+- Learning rate schedules: Cyclic learning rate, warm restarts
+- Regularization techniques: Dropout, L2 regularization
+- Early stopping to prevent overtraining
+- Debugging training issues
+
+---
+
+## 11. Evaluation Metrics
+- Metrics for classification: Precision, recall, F1-score, ROC-AUC
+- Metrics for regression: RMSE, MAE, MAPE
+- Cross-validation techniques for performance evaluation
+
+---
+
+## 12. Practical Deep Learning Projects
+- Digit classification using CNNs (e.g., MNIST dataset)
+- Sentiment analysis using RNNs (e.g., IMDB dataset)
+- Image generation using GANs
+- Graph-based recommendation systems with GCNs
+- Building a question-answering system with Transformers
 
 ---
 
@@ -176,6 +242,4 @@ This repository contains a comprehensive breakdown of topics and subtopics to co
 - Use frameworks like TensorFlow or PyTorch to test concepts hands-on.
 
 ---
-
-Feel free to contribute, report issues, or suggest improvements!
 
