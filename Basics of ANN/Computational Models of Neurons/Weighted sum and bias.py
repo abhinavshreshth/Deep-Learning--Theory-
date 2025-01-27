@@ -58,6 +58,14 @@ weights = [
 ]
 
 # Define biases for three neurons
+# Bias terms allow the neuron to shift its activation function left or right
+# A positive bias shifts the function right, making it harder to activate
+# A negative bias shifts the function left, making it easier to activate
+"""def neuron_with_bias(x, weight, bias):
+    # If bias is positive (e.g., 2), we need more input to get a positive result
+    # If bias is negative (e.g., -2), we need less input to get a positive result
+    return (weight * x) + bias"""
+
 biases = [2.0, 3.0, 0.5]  # Biases for neuron 1, 2, and 3
 
 # Calculate outputs for each neuron
