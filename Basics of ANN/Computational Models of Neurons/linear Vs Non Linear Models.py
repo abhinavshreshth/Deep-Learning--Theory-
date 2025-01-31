@@ -21,8 +21,11 @@ X = np.sort(np.random.rand(100, 1) * 10, axis=0)
 y = 2 * X.squeeze() + 1 + np.random.randn(100) * 2
 
 # Linear Model
+# Create a linear regression model
 linear_model = LinearRegression()
+# Step 1: Train the model
 linear_model.fit(X, y)
+# Step 2: Predict using the same X values
 y_pred_linear = linear_model.predict(X)
 
 # Non-linear Model (Polynomial Regression)
